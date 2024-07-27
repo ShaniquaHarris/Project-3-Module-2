@@ -33,8 +33,8 @@
 if (arr.length < 2) {
 return "No swap performed"
 }
- // let first = arr{0}
- let {first} = arr
+ // let first = arr[0]
+ let [first]= arr
  let last = arr.at(-1)
 
  arr[0] = last
@@ -71,8 +71,8 @@ return nums.length ? [head, tail] : 'This array is empty'
     // devGreet(false, false) // should return "Hey, I am a backend dev and I am sad"
     // ❗ Notes
     // 🧠 Use ternary expressions to construct the string.
-    const devGreet = () => {
-
+    const devGreet = (isFrontend, isHappy) => {
+return 'Hey, I am a ${isFrontend ? 'frontend' : 'backend'} dev and I am ${isHappy ? 'happy' ; 'sad' }'
     }
 
     // 👉 CHALLENGE 4
@@ -84,7 +84,11 @@ return nums.length ? [head, tail] : 'This array is empty'
     // recognize({}) // should return "Hidden Person Rocks!"
     // ❗ Notes
     // 🧠 Try using destructuring to grab the name, and a return followed by a ternary expression.
-    const recognize = () => {
+    const recognize = (person) => {
+      const {name} = person
+      // const name = person.name
+      const  {name} = person
+      return name ? ${name} 'Rules!' : "Hidden Person Rocks!"
 
     }
 N[x ]0
@@ -95,8 +99,8 @@ N[x ]0
     // processBooleans([1, 0, 0, 1, 0]) // should return ["Y", "N", "N", "Y", "N"]
     // ❗ Notes
     // 🧠 Using map, arrow function syntax, and the ternary, you can make this function a short one-liner
-    const processBooleans = () => {
-
+    const processBooleans = (bools) => {
+const processBooleans = bools => bools.map(inst => int ? 'Y' : 'N')
     }
 
     // 👉 CHALLENGE 6
@@ -109,10 +113,16 @@ N[x ]0
     // 🧠 Split the string but do not use the reverse method of arrays. Let's do it manually.
     // 🧠 We suggest using a for loop. Research how to loop backwards over an array, starting at the last element.
     // 🧠 Use a ternary in the return statement.
-    const reverseString = () => {
-
+    const reverseString = (str) => {
+const Split= str.split('')
+const result =[]
+for(let idx = split.length -1; idx >= 0; -idx)
+result.push(char)
     }
-
+ const rejoined = result.join('')
+    // 👉 CHALLENGE 6
+    // 👉 CHALLENGE 6
+ return (str === rejoined)? "It's a palindrome!": rejoined
     // 👉 CHALLENGE 7
     // 🧠 The function zip receives three arrays as arguments. The three arrays are of the same length (which could be any length).
     // 🧠 Array 1 contains names, array 2 contains year numbers, and array 3 contains Booleans.
@@ -125,8 +135,16 @@ N[x ]0
     // ❗ Notes
     // 🧠 Even though object properties have no particular order, to avoid confusing
     // the test runner, please set in each object first name, then age, and finally jsLover.
-    const zip = () => {
-
+    const zip = (names, years, jsLover) => {
+names.forEach(name =>{
+  let person= {
+    name: name,
+    age: years[idx]
+    jsLover: Jslovers[idx],I
+  }
+  result.push(person)
+})
+return result
     }
 
     // 🧪 TESTS, do not work below this line
